@@ -1,0 +1,14 @@
+﻿  PlayerBridgePattern.cpp
+  Player.cpp
+  main.cpp
+c:\users\nover\desktop\gamesengineering\design patterns - lecture 14\design patterns - lecture 14\main.cpp(16): warning C4018: '<': signed/unsigned mismatch
+  HandleToCharacter.cpp
+  GraphicProxy.cpp
+  Graphic.cpp
+  DrawImpl.cpp
+  CharacterHandle.cpp
+  CharacterFactory.cpp
+  Boss.cpp
+  Generating Code...
+  Design Patterns - Lecture 14.vcxproj -> C:\Users\nover\Desktop\GamesEngineering\Design Patterns - Lecture 14\Debug\Design Patterns - Lecture 14.exe
+  Design Patterns - Lecture 14.vcxproj -> C:\Users\nover\Desktop\GamesEngineering\Design Patterns - Lecture 14\Debug\Design Patterns - Lecture 14.pdb (Partial PDB)
