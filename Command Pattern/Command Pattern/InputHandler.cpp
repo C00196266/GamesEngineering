@@ -16,15 +16,15 @@ void InputHandler::handleInput(SDL_Event &e) {
 	switch (e.type){
 	case SDL_KEYDOWN: // key down event detected
 		switch (e.key.keysym.sym) {
-		case SDLK_1: // if e is pressed
+		case SDLK_1:
 			if (!addingMacros) {
-				jumpButton->execute();
+				fireButton->execute();
 			}
 			else {
 				macroCommands->add(fireButton);
 			}
 			break;
-		case SDLK_2: // if q is pressed
+		case SDLK_2:
 			if (!addingMacros) {
 				swapButton->execute();
 			}
@@ -32,7 +32,7 @@ void InputHandler::handleInput(SDL_Event &e) {
 				macroCommands->add(swapButton);
 			}
 			break;
-		case SDLK_3: // if r is pressed
+		case SDLK_3:
 			if (!addingMacros) {
 				reloadButton->execute();
 			}
@@ -40,7 +40,7 @@ void InputHandler::handleInput(SDL_Event &e) {
 				macroCommands->add(reloadButton);
 			}
 			break;
-		case SDLK_4: // if space is pressed
+		case SDLK_4:
 			if (!addingMacros) {
 				jumpButton->execute();
 			}
@@ -63,6 +63,12 @@ void InputHandler::handleInput(SDL_Event &e) {
 				addingMacros = true;
 				std::cout << "Adding commands to macro" << std::endl;
 			}
+			break;
+		case SDLK_r:
+			if (!addingMacros) {
+				macroCommands->remove();
+			}
+			break;
 		}
 		break;
 	}
