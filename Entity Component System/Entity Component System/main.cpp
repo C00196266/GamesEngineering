@@ -1,7 +1,11 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "HealthComponent.h"
+#include "PositionComponent.h"
+#include "ControlComponent.h"
 #include "AISystem.h"
+#include "RenderSystem.h"
+#include "ControlSystem.h"
 
 int main(int argc, char* argv[]) {
 	SDL_Init(SDL_INIT_EVERYTHING);
@@ -36,11 +40,29 @@ int main(int argc, char* argv[]) {
 	dog.addComponent(hc);
 	alien.addComponent(hc);
 
+	PositionComponent pc;
+	player.addComponent(pc);
+	cat.addComponent(pc);
+	dog.addComponent(pc);
+	alien.addComponent(pc);
+
+	ControlComponent cc;
+	player.addComponent(cc);
+
 	AISystem aiSystem;
-	aiSystem.addEntity(player);
+	//aiSystem.addEntity(player);
 	aiSystem.addEntity(cat);
 	aiSystem.addEntity(dog);
 	aiSystem.addEntity(alien);
+
+	RenderSystem renderSystem;
+	renderSystem.addEntity(player);
+	renderSystem.addEntity(cat);
+	renderSystem.addEntity(dog);
+	renderSystem.addEntity(alien);
+
+	ControlSystem controlSystem;
+	controlSystem.addEntity(player);
 
 	while (running) {
 		// reads event event
@@ -48,6 +70,9 @@ int main(int argc, char* argv[]) {
 
 		//update systems
 		aiSystem.update();
+		controlSystem.update();
+		renderSystem.update();
+		renderSystem.draw(renderer);
 
 		// clears and redraws window
 		SDL_RenderClear(renderer);
