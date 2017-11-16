@@ -46,10 +46,10 @@ int main(int argc, char* argv[]) {
 	PositionComponent *pc2 = new PositionComponent(SDL_Point{ 30, 0 });
 	cat->addComponent(pc2);
 
-	PositionComponent *pc3 = new PositionComponent(SDL_Point{60, 0 });
+	PositionComponent *pc3 = new PositionComponent(SDL_Point{ 60, 0 });
 	dog->addComponent(pc3);
 
-	PositionComponent *pc4 = new PositionComponent(SDL_Point{90, 0 });
+	PositionComponent *pc4 = new PositionComponent(SDL_Point{ 90, 0 });
 	alien->addComponent(pc4);
 
 	ControlComponent *cc = new ControlComponent;

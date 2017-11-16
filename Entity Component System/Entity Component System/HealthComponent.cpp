@@ -16,4 +16,7 @@ int HealthComponent::getInt() {
 
 void HealthComponent::setInt(int newHealth) {
 	health = newHealth;
+	if (health < 0) {
+		health = 0;
+	}
 }
