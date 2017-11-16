@@ -22,32 +22,38 @@ int main(int argc, char* argv[]) {
 
 	bool running = true;
 
-	Entity player;
-	player.id = 0;
+	Entity *player = new Entity;
+	player->id = 0;
 
-	Entity cat;
-	cat.id = 1;
+	Entity *cat = new Entity;
+	cat->id = 1;
 
-	Entity dog;
-	dog.id = 2;
+	Entity *dog = new Entity;
+	dog->id = 2;
 
-	Entity alien;
-	alien.id = 3;
+	Entity *alien = new Entity;
+	alien->id = 3;
 
-	HealthComponent hc;
-	player.addComponent(hc);
-	cat.addComponent(hc);
-	dog.addComponent(hc);
-	alien.addComponent(hc);
+	HealthComponent *hc = new HealthComponent;
+	player->addComponent(hc);
+	cat->addComponent(hc);
+	dog->addComponent(hc);
+	alien->addComponent(hc);
 
-	PositionComponent pc;
-	player.addComponent(pc);
-	cat.addComponent(pc);
-	dog.addComponent(pc);
-	alien.addComponent(pc);
+	PositionComponent *pc = new PositionComponent(SDL_Point{ 0, 0 });
+	player->addComponent(pc);
 
-	ControlComponent cc;
-	player.addComponent(cc);
+	PositionComponent *pc2 = new PositionComponent(SDL_Point{ 30, 0 });
+	cat->addComponent(pc2);
+
+	PositionComponent *pc3 = new PositionComponent(SDL_Point{60, 0 });
+	dog->addComponent(pc3);
+
+	PositionComponent *pc4 = new PositionComponent(SDL_Point{90, 0 });
+	alien->addComponent(pc4);
+
+	ControlComponent *cc = new ControlComponent;
+	player->addComponent(cc);
 
 	AISystem aiSystem;
 	//aiSystem.addEntity(player);
@@ -71,11 +77,13 @@ int main(int argc, char* argv[]) {
 		//update systems
 		aiSystem.update();
 		controlSystem.update();
-		renderSystem.update();
-		renderSystem.draw(renderer);
+
+		SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 
 		// clears and redraws window
 		SDL_RenderClear(renderer);
+
+		renderSystem.draw(renderer);
 
 		//SDL_RenderCopy(renderer, texture, &srcrect, &dstrect);
 		SDL_RenderPresent(renderer);

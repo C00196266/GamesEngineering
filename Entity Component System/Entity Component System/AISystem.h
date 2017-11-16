@@ -4,10 +4,10 @@
 
 class AISystem {
 private:
-	std::vector<Entity> entities;
+	std::vector<Entity*> entities;
 public:
 	AISystem();
 
-	void addEntity(Entity e);
+	void addEntity(Entity *e);
 	void update();
 };

@@ -5,11 +5,10 @@
 
 class RenderSystem {
 private:
-	std::vector<Entity> entities;
+	std::vector<Entity*> entities;
 public:
 	RenderSystem();
 
-	void addEntity(Entity e);
-	void update();
+	void addEntity(Entity *e);
 	void draw(SDL_Renderer *renderer);
 };
