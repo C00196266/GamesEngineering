@@ -9,7 +9,7 @@ class InputHandler
 public:
 	InputHandler();
 
-	void handleInput(SDL_Event &e);
+	void handleInput(SDL_Event &e, SDL_Point &pos);
 
 private:
 

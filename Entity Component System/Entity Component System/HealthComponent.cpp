@@ -10,11 +10,11 @@ HealthComponent::HealthComponent(int h) {
 	health = h;
 }
 
-int HealthComponent::getInt() {
+int HealthComponent::getHealth() {
 	return health;
 }
 
-void HealthComponent::setInt(int newHealth) {
+void HealthComponent::setHealth(int newHealth) {
 	health = newHealth;
 	if (health < 0) {
 		health = 0;

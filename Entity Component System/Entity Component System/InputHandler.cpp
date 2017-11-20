@@ -4,25 +4,25 @@ InputHandler::InputHandler() {
 
 }
 
-void InputHandler::handleInput(SDL_Event &e) {
+void InputHandler::handleInput(SDL_Event &e, SDL_Point &pos) {
 	// switch case to find the event type
 	switch (e.type){
 	case SDL_KEYDOWN: // key down event detected
 		switch (e.key.keysym.sym) {
 		case SDLK_w:
-			std::cout << "w pressed" << std::endl;
+			pos.y--;
 			break;
 
 		case SDLK_a:
-			std::cout << "a pressed" << std::endl;
+			pos.x--;
 			break;
 
 		case SDLK_s:
-			std::cout << "s pressed" << std::endl;
+			pos.y++;
 			break;
 
 		case SDLK_d:
-			std::cout << "d pressed" << std::endl;
+			pos.x++;
 			break;
 		}
 		break;

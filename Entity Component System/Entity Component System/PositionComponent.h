@@ -10,9 +10,6 @@ public:
 	PositionComponent();
 	PositionComponent(SDL_Point p);
 
-	int getInt() { return 0; }
-	void setInt(int i) {}
-
-	SDL_Point getPoint();
-	void setPoint(SDL_Point newPos);
+	SDL_Point getPos();
+	void setPos(SDL_Point newPos);
 };

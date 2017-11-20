@@ -1,3 +1,8 @@
-﻿  HealthComponent.cpp
-  Entity Component System.vcxproj -> C:\Users\nover\Desktop\College\GamesEngineering\Entity Component System\x64\Debug\Entity Component System.exe
-  Entity Component System.vcxproj -> C:\Users\nover\Desktop\College\GamesEngineering\Entity Component System\x64\Debug\Entity Component System.pdb (Partial PDB)
+﻿  InputHandler.cpp
+  ControlSystem.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  main.cpp
+  ControlComponent.cpp
+  Entity Component System.vcxproj -> C:\Users\nover\Desktop\GamesEngineering\Entity Component System\x64\Debug\Entity Component System.exe
+  Entity Component System.vcxproj -> C:\Users\nover\Desktop\GamesEngineering\Entity Component System\x64\Debug\Entity Component System.pdb (Partial PDB)

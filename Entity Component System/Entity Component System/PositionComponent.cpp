@@ -10,10 +10,10 @@ PositionComponent::PositionComponent(SDL_Point p) {
 	pos = p;
 }
 
-SDL_Point PositionComponent::getPoint() {
+SDL_Point PositionComponent::getPos() {
 	return pos;
 }
 
-void PositionComponent::setPoint(SDL_Point newPos) {
+void PositionComponent::setPos(SDL_Point newPos) {
 	pos = newPos;
 }

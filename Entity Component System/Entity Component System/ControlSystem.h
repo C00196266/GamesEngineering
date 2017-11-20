@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Entity.h"
+#include "ControlComponent.h"
 
 class ControlSystem {
 private:
@@ -9,5 +10,5 @@ public:
 	ControlSystem();
 
 	void addEntity(Entity *e);
-	void update();
+	void update(SDL_Event &e);
 };
