@@ -17,8 +17,14 @@ std::vector<double> worker(double a[3], double b[3][3]) {
 
 void coordinator() {
 	// matrices
-	double a[3][3] = { 3, 1, 2, 6, 5, 1, 4, 0, 1 };
-	double b[3][3] = { 5, 3, 2, 0, 8, 3, 4, 1, 2 };
+	double a[3][3] = { 3, 1, 2, 
+					   6, 5, 1, 
+					   4, 0, 1 };
+
+	double b[3][3] = { 5, 3, 2, 
+					   0, 8, 3,
+					   4, 1, 2 };
+
 	double c[3][3];
 
 	std::vector<double> row;
