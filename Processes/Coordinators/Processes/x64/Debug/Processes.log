@@ -1,3 +1,5 @@
 ﻿  Source.cpp
+c:\users\nover\desktop\gamesengineering\processes\coordinators\processes\source.cpp(45): warning C4553: '==': operator has no effect; did you intend '='?
+c:\users\nover\desktop\gamesengineering\processes\coordinators\processes\source.cpp(39): warning C4101: 'c': unreferenced local variable
   Processes.vcxproj -> C:\Users\nover\Desktop\GamesEngineering\Processes\Coordinators\x64\Debug\Processes.exe
   Processes.vcxproj -> C:\Users\nover\Desktop\GamesEngineering\Processes\Coordinators\x64\Debug\Processes.pdb (Partial PDB)

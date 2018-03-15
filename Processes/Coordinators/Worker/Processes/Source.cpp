@@ -5,8 +5,8 @@
 #include <tchar.h>
 #include <string>
 
-int main() {
-	std::cout << "Getting to worker" << std::endl;
+int main(int argc, char **argv) {
+	std::cout << argv[0] << std::endl;
 
 	//for (int i = 0; i < 3; i++) {
 	//	row.push_back(0.0);

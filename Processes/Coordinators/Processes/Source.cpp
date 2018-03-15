@@ -40,22 +40,25 @@ void coordinator() {
 	
 	std::vector<double> row;
 
+	char *argv[1];
+
+	argv[0] == "1 2 3";
 
 	for (int i = 0; i < 3; i++) {
 		// calls worker, haven't passed arguments to process
-		CreateProcess("../Worker/Release/Processes.exe", NULL, NULL, NULL, false, 0, NULL, NULL, &si, &pi);
+		CreateProcess("../Worker/Release/Processes.exe", TEXT(argv[0]), NULL, NULL, false, 0, NULL, NULL, &si, &pi);
 
-		row = worker(a[i], b);
-		
-		for (int j = 0; j < 3; j++) {
-			c[i][j] = row.at(j);
-	
-			std::cout << c[i][j] << " ";
-		}
-	
-		std::cout << std::endl;
-	
-		row.clear();
+		//row = worker(a[i], b);
+		//
+		//for (int j = 0; j < 3; j++) {
+		//	c[i][j] = row.at(j);
+		//
+		//	std::cout << c[i][j] << " ";
+		//}
+		//
+		//std::cout << std::endl;
+		//
+		//row.clear();
 	}
 }
 

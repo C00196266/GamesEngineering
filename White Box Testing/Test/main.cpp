@@ -3,7 +3,6 @@
 #include <assert.h>
 #include <stdio.h>
 
-//#include "HealthComponent.h"
 #include "PositionComponent.h"
 #include "AISystem.h"
 
@@ -23,8 +22,8 @@ int main(int argc, char* argv[]) {
 	while (running) {
 		aiSystem.update();
 
-		assert(pos->getPos().y <= 1000);
-		assert(pos->getPos().x <= 1000);
+		assert(pos->getPos().y < 1000);
+		assert(pos->getPos().x < 1000);
 	}
 
 	return 0;

@@ -17,16 +17,18 @@ void producer() {
 
 	while (running == true) {
 		while (p < n) {
+			//m_lock.lock();
 			std::cout << "ID: " << std::this_thread::get_id() << std::endl;
 			std::this_thread::sleep_for(std::chrono::seconds(2));
 
 			// await p = c
 			while (p != c) {
-				std::cout << "Producer spinning:" << std::endl;
+				std::cout << "Spinning:" << std::endl;
 			}
 			buf = a[p];
 			std::cout << a[p] << " deposited in buffer" << std::endl;
 			p++;
+			//m_lock.unlock();
 		}
 		std::cout << "Production finished" << std::endl;
 		running = false;
@@ -39,16 +41,18 @@ void consumer() {
 
 	while (running == true) {
 		while (c < n) {
+			//m_lock.lock();
 			std::cout << "ID: " << std::this_thread::get_id() << std::endl;
 			std::this_thread::sleep_for(std::chrono::seconds(1));
 
 			// await p > c
 			while (p <= c) {
-				std::cout << "Consumer spinning:" << std::endl;
+				std::cout << "Spinning:" << std::endl;
 			}
 			b[c] = buf;
 			std::cout << buf << " deposited in b[]" << std::endl;
 			c++;
+			//m_lock.unlock();
 		}
 
 		std::cout << "Consumption finished" << std::endl;

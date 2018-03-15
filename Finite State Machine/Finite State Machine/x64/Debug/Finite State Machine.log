@@ -1,4 +1,10 @@
 ﻿  main.cpp
 c:\users\nover\desktop\gamesengineering\finite state machine\finite state machine\main.cpp(37): warning C4838: conversion from 'Uint32' to 'int' requires a narrowing conversion
+  Generating Code...
+  Compiling...
+  InputHandler.cpp
+  Generating Code...
+  LINK : C:\Users\nover\Desktop\GamesEngineering\Finite State Machine\x64\Debug\Finite State Machine.exe not found or not built by the last incremental link; performing full link
+     Creating library C:\Users\nover\Desktop\GamesEngineering\Finite State Machine\x64\Debug\Finite State Machine.lib and object C:\Users\nover\Desktop\GamesEngineering\Finite State Machine\x64\Debug\Finite State Machine.exp
   Finite State Machine.vcxproj -> C:\Users\nover\Desktop\GamesEngineering\Finite State Machine\x64\Debug\Finite State Machine.exe
   Finite State Machine.vcxproj -> C:\Users\nover\Desktop\GamesEngineering\Finite State Machine\x64\Debug\Finite State Machine.pdb (Partial PDB)
