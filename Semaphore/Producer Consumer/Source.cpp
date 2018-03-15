@@ -4,13 +4,11 @@
 
 int rear = 0;
 int front = 0;
-int forks[5];
 
 int numOfReaders = 0;
 
 // all the things needed for the semaphore
 struct Semaphore {
-	int full = 0;
 	int readerWriter = 1;
 	int mutexReader = 1;
 };
@@ -23,7 +21,7 @@ void V(int &s) {
 
 void P(int &s) {
 	while (s <= 0) {
-		std::cout << "Spinning" << std::endl;
+		//std::cout << "Spinning" << std::endl;
 	}
 	s--;
 }
@@ -77,10 +75,12 @@ void writer() {
 }
 
 int main() {
-	std::thread reader(reader);
+	std::thread reader1(reader);
+	std::thread reader2(reader);
 	std::thread writer(writer);
 
-	reader.join();
+	reader1.join();
+	reader2.join();
 	writer.join();
 
 	std::cin.get();
